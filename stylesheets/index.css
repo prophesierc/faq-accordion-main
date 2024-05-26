@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'WorkSans-Italic';
+    src: url('/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    /* colors */
+    --primary-clr-white: hsl(0, 0%, 100%);
+    --accent-clr-pink: hsl(275, 100%, 97%);
+    --accent-clr-grayish-purple: hsl(292, 16%, 49%);
+    --accent-clr-dark-purple: hsl(292, 42%, 14%);
+
+    /* Fonts */
+    --ff-worksans: 'WorkSans';
+    --ff-worksans-italic: 'WorkSans-Italic'; 
+
+    /* Font Size */
+    --fs: 16px;
+
+    /* Font Weights */
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fw-extra-bold:700;
+
+    /* border radius */
+    --br:8px;
+}
+body{
+    background-color: var(--accent-clr-pink);            
+}
+.banner > img{
+    width: 100%;
+}
+.content-card{    
+    position: absolute;    
+    top: 20%;
+    background-color: var(--primary-clr-white);
+    margin: 5%;
+    border-radius: var(--br);
+}
+.content-title{
+    display: inline-flex;
+    padding-left: 30px;
+}  
+.content-title h1{
+    padding-left: 40%;
+    font-family: var(--ff-worksans);    
+    font-weight: var(--fw-extra-bold);
+} 
+h2, h3, h4, h5{    
+    font-family: var(--ff-worksans);    
+    font-weight: var(--fw-extra-bold);
+    font-size: var(--fs);
+}
+.content-section{
+    display: flex;
+    width: 80%;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs);
+    font-weight: var(--fw-bold);
+}
+.content-section img{
+    left: 20%
+}
+hr{
+    width: 90%;
+    border: 1px solid var(--accent-clr-pink);
+}
+.content-card > p, .content-card > .content-section{
+    padding-left: 20px;
+}
+.content-card > p{
+    display: none;
+}
+
+.content-section > img{
+    position: relative;
+    display: inline;
+}
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
