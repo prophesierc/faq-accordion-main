@@ -32,7 +32,8 @@
     --br:8px;
 }
 body{
-    background-color: var(--accent-clr-pink);            
+    background-color: var(--accent-clr-pink);     
+    overflow: hidden;       
 }
 .banner > img{
     width: 100%;
@@ -59,36 +60,27 @@ h2, h3, h4, h5{
     font-size: var(--fs);
 }
 .content-section{
-    display: flex;
+    display: inline-flex;
     width: 80%;
     font-family: var(--ff-worksans);
     font-size: var(--fs);
     font-weight: var(--fw-bold);
 }
 .content-section img{
-    left: 20%
+    position: relative;
+    margin-left: auto;
+    left: 15%;
 }
 hr{
     width: 90%;
     border: 1px solid var(--accent-clr-pink);
 }
-.content-card > p, .content-card > .content-section{
+.content-card p, .content-card > .content-section{
     padding-left: 20px;
 }
-.content-card > p{
+.content-card p{
     display: none;
 }
-
-.content-section > img{
-    position: relative;
-    display: inline;
-}
-
-
-
-
-
-
 .attribution { 
     font-size: 11px; text-align: center; 
 }
