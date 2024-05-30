@@ -29,13 +29,15 @@
     --fw-extra-bold:700;
 
     /* border radius */
-    --br:8px;
+    --br: 8px;
 }
 body{
     background-color: var(--accent-clr-pink);     
     overflow: hidden;       
 }
-.banner > img{
+.banner img{
+    /* wip */
+    height: 20%;
     width: 100%;
 }
 .content-card{    
@@ -75,13 +77,19 @@ hr{
     width: 90%;
     border: 1px solid var(--accent-clr-pink);
 }
-.content-card p, .content-card > .content-section{
+.content-card > .content-section{
     padding-left: 20px;
 }
-.content-card p{
+.content-card > p{
+    width: 100%;
+    color: grey;
+    font-family: var(--ff-worksans);
+    font-size: 16px;
     display: none;
 }
 .attribution { 
+    position: absolute;
+    margin: 10%;
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
