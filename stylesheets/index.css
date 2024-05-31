@@ -31,24 +31,28 @@
     /* border radius */
     --br: 8px;
 }
+
 body{
-    background-color: var(--accent-clr-pink);     
-    overflow: hidden;       
-}
+    background-color: var(--accent-clr-pink);   
+    overflow-y: scroll;  
+}    
 .banner img{
-    /* wip */
-    height: 20%;
+    position: relative;
     width: 100%;
+    height: 100%;
 }
-.content-card{    
-    position: absolute;    
-    top: 20%;
+.content-card{       
     background-color: var(--primary-clr-white);
-    margin: 5%;
     border-radius: var(--br);
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    margin: -20% 25vh 0 25vh;
+    position: relative;
 }
 .content-title{
-    display: inline-flex;
+    display: flexbox;
     padding-left: 30px;
 }  
 .content-title h1{
@@ -87,9 +91,7 @@ hr{
     font-size: 16px;
     display: none;
 }
-.attribution { 
-    position: absolute;
-    margin: 10%;
+.attribution {     
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
