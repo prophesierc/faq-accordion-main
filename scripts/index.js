@@ -1,40 +1,58 @@
 class Expand 
 {
-    
     constructor() 
     {
         this.pNodeList = document.querySelectorAll('.content-card > p');
         this.imageNodeList = document.querySelectorAll('.content-section > img');
+        this.headerNodeList = document.querySelectorAll('.content-section > .header');
+
         this.pNodeList.forEach(paragraphIndex => {
             paragraphIndex.style.display = 'none';
         });
         this.imageNodeList.forEach(imageIndex => {
             imageIndex.src = '/assets/images/icon-plus.svg';
         });
+        this.headerNodeList.forEach(imageIndex => {
+            imageIndex.src = '/assets/images/icon-plus.svg';
+        });
     }
 
-    expand() 
-    {        
-        this.imageNodeList.forEach((image, index) => 
-        {            
+    nodeSelector()
+    {
+        this.imageNodeList.forEach((image, index) =>
+        {          
             image.addEventListener('click', () => 
-            {    
-                const paragraphIndex = this.pNodeList[index];
-                const imageIndex = this.imageNodeList[index];    
-                if (paragraphIndex.style.display === 'none') 
-                {
-                    imageIndex.src = '/assets/images/icon-minus.svg';
-                    paragraphIndex.style.display = 'flex';
-                } 
-                else 
-                {
-                    imageIndex.src = '/assets/images/icon-plus.svg';
-                    paragraphIndex.style.display = 'none';
-                }
+            {
+                this.expand(index)
             });
         });
+
+        this.headerNodeList.forEach((header, index) =>
+        {          
+            header.addEventListener('click', () => 
+            {
+                this.expand(index)
+            });
+        });
+    }
+
+    expand(index) 
+    {     
+        const paragraphIndex = this.pNodeList[index];
+        const imageIndex = this.imageNodeList[index];    
+        if (paragraphIndex.style.display === 'none') 
+        {
+            imageIndex.src = '/assets/images/icon-minus.svg';
+            paragraphIndex.style.display = 'flex';
+        } 
+        else 
+        {
+            imageIndex.src = '/assets/images/icon-plus.svg';
+            paragraphIndex.style.display = 'none';
+        }
+            
     }
 }
 
 const expandElement = new Expand();
-expandElement.expand();
+expandElement.nodeSelector();
