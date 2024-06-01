@@ -10,10 +10,10 @@ class Expand
             paragraphIndex.style.display = 'none';
         });
         this.imageNodeList.forEach(imageIndex => {
-            imageIndex.src = '/assets/images/icon-plus.svg';
+            imageIndex.src = './assets/images/icon-plus.svg';
         });
         this.headerNodeList.forEach(imageIndex => {
-            imageIndex.src = '/assets/images/icon-plus.svg';
+            imageIndex.src = './assets/images/icon-plus.svg';
         });
     }
 
@@ -42,12 +42,12 @@ class Expand
         const imageIndex = this.imageNodeList[index];    
         if (paragraphIndex.style.display === 'none') 
         {
-            imageIndex.src = '/assets/images/icon-minus.svg';
+            imageIndex.src = './assets/images/icon-minus.svg';
             paragraphIndex.style.display = 'flex';
         } 
         else 
         {
-            imageIndex.src = '/assets/images/icon-plus.svg';
+            imageIndex.src = './assets/images/icon-plus.svg';
             paragraphIndex.style.display = 'none';
         }
             
